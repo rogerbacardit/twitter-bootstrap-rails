@@ -1,13 +1,9 @@
 ---
-bg.jpg: bg-16944c337e4a8be891ea7ef53b4366eb.jpg
-cube.png: cube-8d997befe84ec992f93208ba05a00439.png
-red_logo.png: red_logo-9328213277047acea3eea42123abcf48.png
-white_logo.png: white_logo-e72997622c21a600e92462034b2fbcc0.png
 active_admin.js: active_admin-d9973bd5416a9bd593fceac194c20b0c.js
 application.js: application-cee5552591220ade7f1963ba43dee35c.js
 active_admin.css: active_admin-8d11a9c33e6523c7caa3885e639a6141.css
-application.css: application-30a5d6437ac1b1a7fd22b539ec31a6e8.css
-ie.css: ie-1177c0fa44f111f8e4bf5ba09da6bf33.css
+application.css: application-0636b9de0f9832656fa9fd898c1dc569.css
+ie.css: ie-e78ea2137888ae8b48a4640ac6e0919a.css
 blank.gif: blank-1f7e2fe6d0bdf3fd6efea93f82ce3b70.gif
 fancy_close.png: fancy_close-742a2174d133aa44858873b43f94970c.png
 fancy_loading.png: fancy_loading-77828c555207b33e37b155b8eef728a7.png
