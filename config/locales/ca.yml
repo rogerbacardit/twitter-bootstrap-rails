@@ -1,0 +1,27 @@
+# encoding: utf-8
+
+ca:
+  contact_form:
+    types:
+      new: Obra nova
+      remake: Reforma
+      interiorism: "Projecte d'interiorisme"
+      electrodomestic: "Compra d'electrodomèstics"
+      other: Altres
+  simple_form:
+    labels:
+      contact_form:
+        name: Nom
+        address: Adreça
+        phone: Telèfon
+        email: E-mail
+        message: Missatge
+    placeholders:
+      contact_form:
+        name: Nom
+        address: Adreça
+        phone: Telèfon
+        email: E-mail
+        message: Missatge
+    hints:
+      contact_form:

@@ -1,0 +1,17 @@
+@mixin intro_animation
+  0%
+    opacity: 0
+  100%
+    opacity: 100%
+
+@-moz-keyframes title
+  +intro_animation
+@-webkit-keyframes title
+  +intro_animation
+@-ms-keyframes title
+  +intro_animation
+
+#intro
+  -moz-animation: title 2s
+  -webkit-animation: title 2s
+  -ms-animation: title 2s

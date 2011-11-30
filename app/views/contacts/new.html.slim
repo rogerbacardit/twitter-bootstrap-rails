@@ -1,0 +1,99 @@
+#contact
+  #info
+    h3 Contacta amb nosaltres
+    p Si estàs interessat en contractar-nos o vols saber més sobre algun dels nostres serveis, si us plau, utilitza el formulari que hi ha a continuació.
+
+  #form
+    =simple_form_for @contact_form, url: contact_path do |form|
+      #client_data
+        -if @browser == :cool
+          =form.input :name, label: false
+          =form.input :address, label: false
+          =form.input :phone, label: false
+          =form.input :email, label: false
+        -else
+          =form.input :name, required: false
+          =form.input :address, required: false
+          =form.input :phone, required: false
+          =form.input :email, required: false
+        =form.input :type, collection: @contact_form.types, label: false, prompt: 'Quin és el motiu de la teva consulta?'
+      #client_message
+        =form.input :message, as: :text, label: false
+        button Enviar
+
+  hr
+  #details
+    h3 Detalls
+    p
+      strong=
+      br
+      | Placeta Saragossa
+      br
+      | Camí fondo, 15
+      br
+      | 08221 Terrassa
+      br
+      | Barcelona
+    p
+      strong
+      br
+      | Tel 93 733 60 56
+      br
+      | Fax: 93 788 17 85
+      br
+      | info@angelmunozlacuina.com
+
+  #map_canvas
+
+script type='text/javascript' src="http://maps.googleapis.com/maps/api/js?key=ABQIAAAAnfs7bKE82qgb3Zc2YyS-oBT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSySz_REpPq-4WZA27OwgbtyR3VcA&sensor=false">
+javascript:
+  function initialize() {
+    var latlng = new google.maps.LatLng(41.565978, 2.012526);
+    var myOptions = {
+      zoom: 16,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+    myOptions);
+
+    var amv_loc = new google.maps.LatLng(41.565150, 2.012650);
+    var amv_img = "/amv_location.png"
+    var amv = new google.maps.Marker({
+      position: amv_loc,
+      title:"Angel Muñoz Cuines i Banys",
+      icon: amv_img
+    });
+    var parking_loc = new google.maps.LatLng(41.565200, 2.012000);
+    var parking_img = "/parking_location.png"
+    var parking = new google.maps.Marker({
+      position: parking_loc,
+      title:"Parking Vapor Ventalló",
+      icon: parking_img
+    });
+
+    amv.setMap(map);
+    parking.setMap(map);
+
+    var amv_info = '<div>Angel Muñoz Cuines i Banys</div>'
+
+    var amv_infowindow = new google.maps.InfoWindow({
+      content: amv_info
+    });
+
+    google.maps.event.addListener(amv, 'click', function() {
+      amv_infowindow.open(map,amv);
+      parking_infowindow.close();
+    });
+
+    var parking_info = "<div>Si aparques al parking del Vapor Ventalló et podem abonar l'estança</div>"
+
+    var parking_infowindow = new google.maps.InfoWindow({
+      content: parking_info
+    });
+
+    google.maps.event.addListener(parking, 'click', function() {
+      parking_infowindow.open(map,parking);
+      amv_infowindow.close();
+    });
+  }

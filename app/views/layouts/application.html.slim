@@ -1,0 +1,20 @@
+html
+  head
+    title Escoverd
+    meta charset='utf-8'
+    meta name="google-site-verification" content="lknBemkHB68yfLuxZt0SvERnAmhKRfRhD2Hkww-HMyc"
+    meta name='authors' content='ROGER BACARDIT'
+    =stylesheet_link_tag :application if @browser == :cool
+    =stylesheet_link_tag :ie if @browser == :ie
+    =javascript_include_tag :application
+  /*-if @load_gmap*/
+  /*  body onload="initialize()"*/
+  /*-else*/
+  /*  body*/
+  body
+
+  #content
+    == yield
+
+  /*=render partial: 'layouts/google_analytics' if Rails.env.production?*/
+  /*=render partial: 'layouts/gosquared' if Rails.env.production?*/

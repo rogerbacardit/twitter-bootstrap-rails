@@ -1,0 +1,95 @@
+@import base
+@import compass
+@import blueprint
+@import blueprint/scaffolding
+@import compass/css3
+@import compass/css3/opacity
+@import compass/typography/lists/bullets
+@import compass/css3/text-shadow
+@import compass/css3/transition
+
+
++global-reset
+
+body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+  +blueprint-scaffolding
+
+  background-color: grey
+
+#container
+  +container
+
+#bg
+  img
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+
+#nav
+  position: absolute
+  text-align: justify
+  background: rgb(0,0,0)
+  +opacity(0.6)
+  padding: 0px
+  width: 240px
+  // z-index: 80
+  top: 0px
+  bottom: 0px
+  left: 0px
+  +no-bullets
+  font-weight: bold
+  height: 100%
+  ul.links
+    font-size: 16px
+    position: absolute
+    left: 0px
+    bottom: 70px
+    width: 240px
+    padding: 0px
+    a
+      text-decoration: none
+      display: block
+      padding-left: 20px
+      text-transform: uppercase
+      &.selected, &.selected:hover
+        background: rgb(255,255,255)
+        color: #000
+
+  ul.contact
+    font-size: 13px
+    position: absolute
+    left: 6px
+    bottom: 0px
+    width: 240px
+    margin-top: 65px
+
+#logo
+  a
+    display: block
+    height: 80px
+    width: 200px
+    margin-left: 20px
+    background: image-url('white_logo.png') no-repeat
+    span
+      visibility: hidden
+    +opacity(0.6)
+
+  margin-top: 50px
+  position: absolute
+  z-index: 90
+
+#content
+  min-width: 700px
+  position: relative
+  height: 100%
+  padding-left: 240px
+  font-family: 'Questrial'
+  font-size: 1.25em
