@@ -23,7 +23,7 @@ gem 'carrierwave-meta'
 
 gem 'high_voltage'
 
-gem 'slim'
+gem 'slim-rails'
 
 gem "twitter-bootstrap-rails"
 
