@@ -25,6 +25,8 @@ gem 'high_voltage'
 
 gem 'slim'
 
+gem "twitter-bootstrap-rails"
+
 gem 'high_voltage'
 
 group :production do
